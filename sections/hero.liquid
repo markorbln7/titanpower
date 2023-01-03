@@ -1,0 +1,60 @@
+{{ 'section-hero.css' | asset_url | stylesheet_tag }}
+{{ 'section-hero.js' | asset_url | script_tag }}
+<section class="hero f aic">
+    <div class="hero__textbox">
+        <div class="hero__textbox--subtitle color-white">{{section.settings.subtitle}}</div>  
+        <div class="hero__textbox--title color-white">{{section.settings.title}}</div>
+        <div class="hero__textbox--button">
+            <a href="{{section.settings.button_url}}" class="btn btn-white-transparent">{{section.settings.button_text}}</a>
+        </div>
+    </div>
+    <div class="hero__section-image">
+        {% render 'basic-responsive-image',
+        type: section.settings.image,
+        data_widths: '[180, 360, 540, 720, 900, 1080]' %}
+        <noscript>
+        <img src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.image.alt }}">
+        </noscript>
+    </div>
+</section>
+{% schema %}
+{
+  "name": "Blog posts",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "NEW IN"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Lorem ipsum dolor sit amet"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button url"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero",
+      "category": "Home Page"
+    }
+  ]
+}
+{% endschema %}

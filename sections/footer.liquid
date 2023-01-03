@@ -1,0 +1,669 @@
+
+<footer class="site-footer small--text-center" role="contentinfo">
+
+
+</footer>
+
+{% schema %}
+{
+  "name": {
+    "de": "Fußzeile",
+    "en": "Footer",
+    "es": "Pie de página",
+    "fr": "Pied de page",
+    "it": "Footer",
+    "ja": "フッター",
+    "nl": "Voettekst",
+    "pt-BR": "Rodapé",
+    "zh-CN": "页脚",
+    "zh-TW": "頁尾"
+  },
+  "class": "footer-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "social_enabled",
+      "label": {
+        "de": "Social-Media-Symbole anzeigen",
+        "en": "Show social media icons",
+        "es": "Mostrar iconos de redes sociales",
+        "fr": "Afficher les icônes des médias sociaux",
+        "it": "Mostra icone social media",
+        "ja": "ソーシャルメディアのアイコンを表示する",
+        "nl": "Pictogrammen social media weergeven",
+        "pt-BR": "Exibir ícones de redes sociais",
+        "zh-CN": "显示社交媒体图标",
+        "zh-TW": "顯示社群媒體圖示"
+      },
+      "info": {
+        "de": "Konten im Social-Media-Abschnitt hinzufügen",
+        "en": "Add accounts in Social media section",
+        "es": "Agregar cuentas en la sección de redes sociales",
+        "fr": "Ajouter les comptes dans la section Médias sociaux",
+        "it": "Aggiungi account nella sezione Social media",
+        "ja": "ソーシャルメディアのセクションにアカウントを追加する",
+        "nl": "Accounts toevoegen in deel Social media",
+        "pt-BR": "Adicionar contas na seção Redes sociais",
+        "zh-CN": "在社交媒体部分中添加帐户",
+        "zh-TW": "在社群媒體區段新增帳號"
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": {
+        "de": "Zahlungssymbole anzeigen",
+        "en": "Show payment icons",
+        "es": "Mostrar iconos de pago",
+        "fr": "Afficher les icônes de paiement",
+        "it": "Mostra le icone di pagamento",
+        "ja": "支払いアイコンを表示する",
+        "nl": "Betalingspictogrammen weergeven",
+        "pt-BR": "Exibir ícones de pagamento",
+        "zh-CN": "显示付款图标",
+        "zh-TW": "顯示付款圖示"
+      },
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "legal_menu",
+      "label": {
+        "de": "Rechtliches Menü",
+        "en": "Legal menu",
+        "es": "Menú legal",
+        "fr": "Menu juridique",
+        "it": "Menu legale",
+        "ja": "リーガルメニュー",
+        "nl": "Menu Juridisch",
+        "pt-BR": "Menu Aviso legal",
+        "zh-CN": "法律菜单",
+        "zh-TW": "法律選單"
+      }
+    }
+  ],
+  "max_blocks": 9,
+  "blocks": [
+    {
+      "type": "menu",
+      "name": {
+        "de": "Menü",
+        "en": "Menu",
+        "es": "Menú",
+        "fr": "Menu",
+        "it": "Menu",
+        "ja": "メニュー",
+        "nl": "Menu",
+        "pt-BR": "Menu",
+        "zh-CN": "菜单",
+        "zh-TW": "選單"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "de": "Titel",
+            "en": "Heading",
+            "es": "Título",
+            "fr": "Titre",
+            "it": "Heading",
+            "ja": "見出し",
+            "nl": "Kop",
+            "pt-BR": "Título",
+            "zh-CN": "标题",
+            "zh-TW": "標題"
+          },
+          "default": {
+            "de": "Quick-Links",
+            "en": "Quick links",
+            "es": "Enlaces rápidos",
+            "fr": "Liens rapides",
+            "it": "Link rapidi",
+            "ja": "クイックリンク",
+            "nl": "Snelle links",
+            "pt-BR": "Links rápidos",
+            "zh-CN": "快速链接",
+            "zh-TW": "快速連結"
+          }
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": {
+            "de": "Menü",
+            "en": "Menu",
+            "es": "Menú",
+            "fr": "Menu",
+            "it": "Menu",
+            "ja": "メニュー",
+            "nl": "Menu",
+            "pt-BR": "Menu",
+            "zh-CN": "菜单",
+            "zh-TW": "選單"
+          }
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": {
+            "de": "Breite des Elements",
+            "en": "Container width",
+            "es": "Ancho del contenedor",
+            "fr": "Largeur du conteneur",
+            "it": "Larghezza contenitore",
+            "ja": "コンテナーの幅",
+            "nl": "Containerbreedte",
+            "pt-BR": "Largura do recipiente",
+            "zh-CN": "容器宽度",
+            "zh-TW": "容器寬度"
+          },
+          "default": "16%",
+          "options": [
+            {
+              "value": "16%",
+              "label": {
+                "de": "16 %",
+                "en": "16%",
+                "es": "16%",
+                "fr": "16 %",
+                "it": "16%",
+                "ja": "16％",
+                "nl": "16%",
+                "pt-BR": "16%",
+                "zh-CN": "16%",
+                "zh-TW": "16%"
+              }
+            },
+            {
+              "value": "25%",
+              "label": {
+                "de": "25%",
+                "en": "25%",
+                "es": "25%",
+                "fr": "25 %",
+                "it": "25%",
+                "ja": "25%",
+                "nl": "25%",
+                "pt-BR": "25%",
+                "zh-CN": "25％",
+                "zh-TW": "25%"
+              }
+            },
+            {
+              "value": "33%",
+              "label": {
+                "de": "33%",
+                "en": "33%",
+                "es": "33%",
+                "fr": "33 %",
+                "it": "33%",
+                "ja": "33%",
+                "nl": "33%",
+                "pt-BR": "33%",
+                "zh-CN": "33%",
+                "zh-TW": "33%"
+              }
+            },
+            {
+              "value": "50%",
+              "label": {
+                "de": "50%",
+                "en": "50%",
+                "es": "50%",
+                "fr": "50 %",
+                "it": "50%",
+                "ja": "50%",
+                "nl": "50%",
+                "pt-BR": "50%",
+                "zh-CN": "50%",
+                "zh-TW": "50%"
+              }
+            },
+            {
+              "value": "66%",
+              "label": {
+                "de": "66%",
+                "en": "66%",
+                "es": "66%",
+                "fr": "66 %",
+                "it": "66%",
+                "ja": "66%",
+                "nl": "66%",
+                "pt-BR": "66%",
+                "zh-CN": "66%",
+                "zh-TW": "66%"
+              }
+            },
+            {
+              "value": "75%",
+              "label": {
+                "de": "75%",
+                "en": "75%",
+                "es": "75%",
+                "fr": "75 %",
+                "it": "75%",
+                "ja": "75%",
+                "nl": "75%",
+                "pt-BR": "75%",
+                "zh-CN": "75%",
+                "zh-TW": "75%"
+              }
+            },
+            {
+              "value": "100%",
+              "label": {
+                "de": "100%",
+                "en": "100%",
+                "es": "100%",
+                "fr": "100 %",
+                "it": "100%",
+                "ja": "100%",
+                "nl": "100%",
+                "pt-BR": "100%",
+                "zh-CN": "100%",
+                "zh-TW": "100%"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": {
+        "de": "Rich Text",
+        "en": "Rich text",
+        "es": "Texto enriquecido",
+        "fr": "Texte enrichi",
+        "it": "Rich text",
+        "ja": "リッチテキスト",
+        "nl": "Rich text",
+        "pt-BR": "Rich text",
+        "zh-CN": "富文本",
+        "zh-TW": "RTF 文字"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "de": "Titel",
+            "en": "Heading",
+            "es": "Título",
+            "fr": "Titre",
+            "it": "Heading",
+            "ja": "見出し",
+            "nl": "Kop",
+            "pt-BR": "Título",
+            "zh-CN": "标题",
+            "zh-TW": "標題"
+          },
+          "default": {
+            "de": "Kontakt aufnehmen",
+            "en": "Get in touch",
+            "es": "Ponerse en contacto",
+            "fr": "Entrer en contact",
+            "it": "Contattaci",
+            "ja": "お問い合わせはこちらから",
+            "nl": "Neem contact op",
+            "pt-BR": "Entre em contato",
+            "zh-CN": "取得联系",
+            "zh-TW": "請與我們聯絡"
+          }
+        },
+        {
+          "type": "richtext",
+          "id": "richtext",
+          "label": {
+            "de": "Text",
+            "en": "Text",
+            "es": "Texto",
+            "fr": "Texte",
+            "it": "Testo",
+            "ja": "テキスト",
+            "nl": "Tekst",
+            "pt-BR": "Texto",
+            "zh-CN": "文本",
+            "zh-TW": "文字"
+          },
+          "default": {
+            "de": "<p>Mit diesem Text können Sie Ihre Kunden über Ihre Marke informieren.</p>",
+            "en": "<p>Use this text to share information about your brand with your customers.</p>",
+            "es": "<p>Usa este texto para compartir información sobre tu marca con tus clientes.</p>",
+            "fr": "<p>Utilisez ce texte pour partager des informations sur votre marque avec vos clients.</p>",
+            "it": "<p>Utilizza questo spazio per condividere informazioni sul tuo brand con i clienti.</p>",
+            "ja": "<p>このテキストを使用して、あなたのブランドに関する情報をお客様と共有します。</p>",
+            "nl": "<p>Gebruik deze tekst om informatie over uw merk met uw klanten te delen.</p>",
+            "pt-BR": "<p>Use este texto para compartilhar informações sobre sua marca com seus clientes.</p>",
+            "zh-CN": "<p>使用此文本与您的客户分享有关您的品牌的信息。</p>",
+            "zh-TW": "<p>請利用此段文字跟客戶分享您的品牌資訊。</p>"
+          }
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": {
+            "de": "Breite des Elements",
+            "en": "Container width",
+            "es": "Ancho del contenedor",
+            "fr": "Largeur du conteneur",
+            "it": "Larghezza contenitore",
+            "ja": "コンテナーの幅",
+            "nl": "Containerbreedte",
+            "pt-BR": "Largura do recipiente",
+            "zh-CN": "容器宽度",
+            "zh-TW": "容器寬度"
+          },
+          "default": "50%",
+          "options": [
+            {
+              "value": "16%",
+              "label": {
+                "de": "16 %",
+                "en": "16%",
+                "es": "16%",
+                "fr": "16 %",
+                "it": "16%",
+                "ja": "16％",
+                "nl": "16%",
+                "pt-BR": "16%",
+                "zh-CN": "16%",
+                "zh-TW": "16%"
+              }
+            },
+            {
+              "value": "25%",
+              "label": {
+                "de": "25%",
+                "en": "25%",
+                "es": "25%",
+                "fr": "25 %",
+                "it": "25%",
+                "ja": "25%",
+                "nl": "25%",
+                "pt-BR": "25%",
+                "zh-CN": "25％",
+                "zh-TW": "25%"
+              }
+            },
+            {
+              "value": "33%",
+              "label": {
+                "de": "33%",
+                "en": "33%",
+                "es": "33%",
+                "fr": "33 %",
+                "it": "33%",
+                "ja": "33%",
+                "nl": "33%",
+                "pt-BR": "33%",
+                "zh-CN": "33%",
+                "zh-TW": "33%"
+              }
+            },
+            {
+              "value": "50%",
+              "label": {
+                "de": "50%",
+                "en": "50%",
+                "es": "50%",
+                "fr": "50 %",
+                "it": "50%",
+                "ja": "50%",
+                "nl": "50%",
+                "pt-BR": "50%",
+                "zh-CN": "50%",
+                "zh-TW": "50%"
+              }
+            },
+            {
+              "value": "66%",
+              "label": {
+                "de": "66%",
+                "en": "66%",
+                "es": "66%",
+                "fr": "66 %",
+                "it": "66%",
+                "ja": "66%",
+                "nl": "66%",
+                "pt-BR": "66%",
+                "zh-CN": "66%",
+                "zh-TW": "66%"
+              }
+            },
+            {
+              "value": "75%",
+              "label": {
+                "de": "75%",
+                "en": "75%",
+                "es": "75%",
+                "fr": "75 %",
+                "it": "75%",
+                "ja": "75%",
+                "nl": "75%",
+                "pt-BR": "75%",
+                "zh-CN": "75%",
+                "zh-TW": "75%"
+              }
+            },
+            {
+              "value": "100%",
+              "label": {
+                "de": "100%",
+                "en": "100%",
+                "es": "100%",
+                "fr": "100 %",
+                "it": "100%",
+                "ja": "100%",
+                "nl": "100%",
+                "pt-BR": "100%",
+                "zh-CN": "100%",
+                "zh-TW": "100%"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": {
+        "de": "Newsletter-Anmeldung",
+        "en": "Newsletter signup",
+        "es": "Suscripción al boletín",
+        "fr": "Inscription",
+        "it": "Iscrizione newsletter",
+        "ja": "メールマガジンの登録",
+        "nl": "Nieuwsbriefaanmelding",
+        "pt-BR": "Assinatura da newsletter",
+        "zh-CN": "新闻通讯注册",
+        "zh-TW": "訂閱電子報"
+      },
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "de": "Titel",
+            "en": "Heading",
+            "es": "Título",
+            "fr": "Titre",
+            "it": "Heading",
+            "ja": "見出し",
+            "nl": "Kop",
+            "pt-BR": "Título",
+            "zh-CN": "标题",
+            "zh-TW": "標題"
+          },
+          "default": {
+            "de": "Newsletter",
+            "en": "Newsletter",
+            "es": "Boletín",
+            "fr": "Newsletter",
+            "it": "Newsletter",
+            "ja": "メールマガジン",
+            "nl": "Nieuwsbrief",
+            "pt-BR": "Newsletter",
+            "zh-CN": "新闻通讯",
+            "zh-TW": "電子報"
+          }
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "label": {
+            "de": "Subtext",
+            "en": "Subtext",
+            "es": "Subtexto",
+            "fr": "Sous-texte",
+            "it": "Sottotesto",
+            "ja": "サブテキスト",
+            "nl": "Subtekst",
+            "pt-BR": "Subtexto",
+            "zh-CN": "子文本",
+            "zh-TW": "子文字"
+          },
+          "default": {
+            "de": "<p>Werbeaktionen, neue Produkte und Sonderangebote. Direkt in Ihrem Posteingang.</p>",
+            "en": "<p>Promotions, new products and sales. Directly to your inbox.</p>",
+            "es": "<p>Promociones, nuevos productos y ventas. Directamente a tu bandeja de entrada.</p>",
+            "fr": "<p>Promotions, nouveaux produits et soldes. Directement dans votre boîte de réception.</p>",
+            "it": "<p>Promozioni, nuovi prodotti e offerte. Direttamente nella tua inbox.</p>",
+            "ja": "<p>プロモーション、新商品、セールについて、あなたの受信箱に直接知らせる。</p>",
+            "nl": "<p>Promoties, nieuwe producten en uitverkoop rechtstreeks in uw inbox.</p>",
+            "pt-BR": "<p>Promoções, novos produtos e ofertas, diretamente em sua caixa de entrada.</p>",
+            "zh-CN": "<p>促销、新产品和销售。直接发送到您的收件箱。</p>",
+            "zh-TW": "<p>讓您直接在收件匣內收取促銷活動、最新產品和特賣活動訊息。</p>"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": {
+            "de": "Alle Kunden, die sich eintragen, bekommen ein Konto in Shopify. [Kunden ansehen](/admin/customers?query=&accepts_marketing=1)",
+            "en": "Any customers who sign up will have an account created for them in Shopify. [View customers](/admin/customers?query=&accepts_marketing=1)",
+            "es": "Todos los clientes que se registren tendrán una cuenta creada para ellos en Shopify. [Ver clientes](/admin/customers?query=&accepts_marketing=1)",
+            "fr": "Tous les clients qui s'inscrivent auront un compte créé pour eux sur Shopify. [Voir les clients](/admin/customers?query=&accepts_marketing=1)",
+            "it": "Qualsiasi cliente che si iscrive avrà un account creato appositamente su Shopify. [Visualizza clienti](/admin/customers?query=&accepts_marketing=1)",
+            "ja": "サインアップしたお客様は、Shopifyでアカウントが作成されます。[お客様を表示](/admin/customers?query=&accepts_marketing=1)",
+            "nl": "Voor alle klanten die zich aanmelden, wordt een Shopify-account gemaakt. [Klanten weergeven](/admin/customers?query=&accepts_marketing=1)",
+            "pt-BR": "Todos os clientes que se inscreverem terão uma conta criada para eles na Shopify. [Ver clientes](/admin/customers?query=&accepts_marketing=1)",
+            "zh-CN": "任何注册用户都将在 Shopify 中拥有一个为他们创建的帐户。[查看客户](/admin/customers?query=&accepts_marketing=1)",
+            "zh-TW": "客戶註冊後就可以擁有 Shopify 的帳號。[檢視客戶](/admin/customers?query=&accepts_marketing=1)"
+          }
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": {
+            "de": "Breite des Elements",
+            "en": "Container width",
+            "es": "Ancho del contenedor",
+            "fr": "Largeur du conteneur",
+            "it": "Larghezza contenitore",
+            "ja": "コンテナーの幅",
+            "nl": "Containerbreedte",
+            "pt-BR": "Largura do recipiente",
+            "zh-CN": "容器宽度",
+            "zh-TW": "容器寬度"
+          },
+          "default": "33%",
+          "options": [
+            {
+              "value": "25%",
+              "label": {
+                "de": "25%",
+                "en": "25%",
+                "es": "25%",
+                "fr": "25 %",
+                "it": "25%",
+                "ja": "25%",
+                "nl": "25%",
+                "pt-BR": "25%",
+                "zh-CN": "25％",
+                "zh-TW": "25%"
+              }
+            },
+            {
+              "value": "33%",
+              "label": {
+                "de": "33%",
+                "en": "33%",
+                "es": "33%",
+                "fr": "33 %",
+                "it": "33%",
+                "ja": "33%",
+                "nl": "33%",
+                "pt-BR": "33%",
+                "zh-CN": "33%",
+                "zh-TW": "33%"
+              }
+            },
+            {
+              "value": "50%",
+              "label": {
+                "de": "50%",
+                "en": "50%",
+                "es": "50%",
+                "fr": "50 %",
+                "it": "50%",
+                "ja": "50%",
+                "nl": "50%",
+                "pt-BR": "50%",
+                "zh-CN": "50%",
+                "zh-TW": "50%"
+              }
+            },
+            {
+              "value": "66%",
+              "label": {
+                "de": "66%",
+                "en": "66%",
+                "es": "66%",
+                "fr": "66 %",
+                "it": "66%",
+                "ja": "66%",
+                "nl": "66%",
+                "pt-BR": "66%",
+                "zh-CN": "66%",
+                "zh-TW": "66%"
+              }
+            },
+            {
+              "value": "75%",
+              "label": {
+                "de": "75%",
+                "en": "75%",
+                "es": "75%",
+                "fr": "75 %",
+                "it": "75%",
+                "ja": "75%",
+                "nl": "75%",
+                "pt-BR": "75%",
+                "zh-CN": "75%",
+                "zh-TW": "75%"
+              }
+            },
+            {
+              "value": "100%",
+              "label": {
+                "de": "100%",
+                "en": "100%",
+                "es": "100%",
+                "fr": "100 %",
+                "it": "100%",
+                "ja": "100%",
+                "nl": "100%",
+                "pt-BR": "100%",
+                "zh-CN": "100%",
+                "zh-TW": "100%"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

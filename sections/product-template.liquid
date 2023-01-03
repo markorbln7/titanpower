@@ -1,0 +1,72 @@
+<section id="product-template" class="product-template titan-bg-black">
+  <div class="container">
+    <div class="product-template__wrapper f ais jcc">
+        <div class="product-template__wrapper--image column">
+            {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+            {% render 'basic-responsive-image',
+            type: featured_image,
+            data_widths: '[180, 360, 540, 720, 900, 1080]' %}
+            <noscript>
+            <img src="{{ section.settings.image | img_url: '800x' }}" alt="{{ featured_image.alt }}">
+            </noscript>
+        </div>
+        <div class="product-template__wrapper--content column">
+            <div class="product-template__wrapper--content__review">
+                <span class="product-template__wrapper--content__review--stars color-titan-yellow font-sans">★ ★ ★ ★ ★ </span>
+                <span class="product-template__wrapper--content__review--mark font-sans color-white">4.81 </span>
+                <span class="product-template__wrapper--content__review--number color-gray font-lato">(5502)</span>
+            </div>
+            <h2 class="h2 product-template__wrapper--content__title color-white">
+                {{product.title}}
+            </h2>
+            <div class="product-template__wrapper--content__features font-sans">
+                {% for tag in product.tags %}
+                  {% if tag contains 'feature' %}
+                    <div class="product-template__wrapper--content__features--name">⚡&nbsp{{tag | remove: "feature:"}}</div>
+                  {% endif %}
+                {% endfor %}
+            </div>
+            {% if product.compare_at_price %}
+            <div class="product-template__wrapper--content__originalPrice font-sans color-titan-green">
+                {% assign discount = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round %}
+                {{discount}}% OFF TODAY
+            </div>
+            {% endif %}
+            {% if product.compare_at_price %}
+              <div class="product-template__wrapper--content__crossedPrice font-sans color-white">
+                  {{product.compare_at_price | money }}
+              </div>
+            {% endif %}
+            <div class="product-template__wrapper--content__originalPrice font-sans color-titan-green">
+                {{product.price | money }} <span class="product-template__wrapper--content__originalPrice--delivery color-white"> & Free Delivery</span>
+            </div>
+            {%- assign form_class = 'product-template__wrapper--content__form addToCartForm' -%}
+            {%- assign form_id = 'product-form-installment-' | append: section.id -%}
+            {% form 'product', product, class:form_class, id:form_id %}
+                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                <input type="hidden" name="form_type" value="product">
+                <input type="hidden" name="utf8" value="✓">
+                {% render 'product-variant-options', product: product%}
+                <div class="product-template__wrapper--content__form--qty f aic color-white">
+                  <div class="product-template__wrapper--content__form--qty__custom js-minus color-titan-green">-</div>
+                  <input type="number" id="quantity" name="quantity" value="1" min="1" class="color-white product-template__wrapper--content__form--qty__number quantity-selector custom-qty js-qty">
+                  <div class="product-template__wrapper--content__form--qty__custom js-plus color-titan-green">+</div>
+                </div>
+                <div class="product-template__wrapper--content__form--atc">
+                  <button type="submit" name="add" id="addToCart-{{ section.id }}" class="f aic jcc w100 bg-titan-green font-sans btn--add-to-cart color-white">
+                    <span class="icon icon-thunder">⚡</span>
+                    <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
+                  </button>
+                </div>
+                <div class="product-template__wrapper--content__form--note color-titan-green font-sans">
+                    <span class="color-white">Only Here:</span> Not Available on Amazon or eBay
+                </div>
+                <button type="button" class="shopify-payment-button__button product-template__wrapper--content__form--buynow" onclick="document.querySelector('[data-testid]').click();">👉 Checkout now</button>
+                <div style="display:none;">
+                    {{ form | payment_button }}
+                </div>
+            {% endform %}
+        </div>
+    </div>
+  </div>
+</section>
